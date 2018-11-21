@@ -24,6 +24,8 @@ passport.use(
       clientID: keys.googleClientId,
       clientSecret: keys.googleSecret,
       callbackURL: "/auth/google/callback",
+      // proxy is for passport strategy changing
+      // from https to http when in production
       proxy: true
     },
     // hits after callback
