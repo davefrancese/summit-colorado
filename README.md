@@ -6,7 +6,7 @@
 
 [Test OAuth Flow](https://summit-colorado.herokuapp.com/auth/google)
 
-#100DaysOfCode Log
+# 100DaysOfCode Log
 
 ### Day 0: November 15, 2018
 
