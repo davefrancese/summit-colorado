@@ -1,0 +1,50 @@
+/* dark green: #032d2e; */
+/* green: #015852; */
+/* white: #F2F2F0; */
+/* orange: #D2AC2F; */
+/* peach: #BF9266; */
+/* red: #BF5A57; */
+
+/* title font: font-family: "Rubik", sans-serif; */
+/* copy font: font-family: "Roboto Mono", monospace; */
+
+/* GENERAL SETUP */
+body {
+  background-color: #032d2e;
+  color: #f2f2f0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-family: "Roboto Mono", monospace;
+}
+
+a {
+  text-decoration: none;
+  color: #bf5a57;
+}
+
+a:hover {
+  color: #d2ac2f;
+}
+
+/* COMPONENT - APP */
+.App {
+  margin: 5%;
+}
+
+.App h1 {
+  font-family: "Rubik", sans-serif;
+  color: #d2ac2f;
+  font-weight: bolder;
+}
+
+.App footer {
+  font-size: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
