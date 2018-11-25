@@ -62,6 +62,6 @@
 
 **Today's Progress**: Login and Logout 99% complete on Client Side
 
-**Thoughts:** Using redux thunk to use dispatch function within actions is a nice add. The flow is working smoothly however I'm having a strange bug with export default in my action and reducer. Seems that it doesn't like to just 'export const ...', must have 'export default' statement. Other than that. Things are coming together nicely. Now I just need to fix it so that when someone logs in or out it will redirect the user to the proper path instead of showing the server side.
+**Thoughts:** Using redux thunk to use dispatch function within actions is a nice add. The flow is working smoothly however I'm having a strange bug with export default in my action and reducer. Seems that it doesn't like to just 'export const ...', must have 'export default' statement. Other than that. Things are coming together nicely. Now I just need to fix it so that when someone logs in or out it will redirect the user to the proper path instead of showing the server side. Still need to deploy with frontend.
 
 **Link to work** [Deployed App](https://summit-colorado.herokuapp.com/)
