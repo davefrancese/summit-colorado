@@ -18,7 +18,8 @@ h1 {
   font-size: 4rem;
 }
 
-p {
+p,
+li {
   font-family: "Roboto Mono", monospace;
 }
 
@@ -31,15 +32,27 @@ a:hover {
   color: #d2ac2f;
 }
 
-/* COMPONENT - APP */
-.App {
-  margin: 5%;
+.btn {
+  border-radius: 3px;
+  background: #015852;
+  border: none;
+  color: #bf5a57;
+  font-family: "Roboto Mono", monospace;
+  padding: 10px;
 }
 
-.App h1 {
-  font-family: "Rubik", sans-serif;
+.btn:hover {
+  border-radius: 3px;
+  background: #015852;
+  border: none;
   color: #d2ac2f;
-  font-weight: bolder;
+  font-family: "Roboto Mono", monospace;
+  padding: 10px;
+}
+
+/* COMPONENT - APP */
+.App {
+  margin: 1% 3%;
 }
 
 .App footer {
@@ -47,4 +60,26 @@ a:hover {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+/* COMPONENT - HEADER */
+.Header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header h1 {
+  font-family: "Rubik", sans-serif;
+  color: #d2ac2f;
+  font-weight: bolder;
+}
+
+.Header ul {
+  list-style: none;
+  display: flex;
+  margin-top: 50px;
+}
+
+.Header li {
+  margin-right: 20px;
 }

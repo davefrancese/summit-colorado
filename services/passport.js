@@ -29,22 +29,19 @@ passport.use(
       proxy: true
     },
     // hits after callback
-    (accessToken, refreshToken, profile, done) => {
-      User.findOne({ googleId: profile.id }).then(existingUser => {
-        if (existingUser) {
-          // dont make new one
-          done(null, existingUser);
-        } else {
-          new User({
-            googleId: profile.id,
-            displayName: profile.displayName
-          })
-            .save()
-            .then(user => {
-              done(null, user);
-            });
-        }
-      });
+    async (accessToken, refreshToken, profile, done) => {
+      const existingUser = await User.findOne({ googleId: profile.id });
+      if (existingUser) {
+        // dont make new one
+        done(null, existingUser);
+      } else {
+        const user = await new User({
+          googleId: profile.id,
+          displayName: profile.displayName
+        }).save();
+
+        done(null, user);
+      }
     }
   )
 );
