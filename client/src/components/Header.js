@@ -1,40 +1,37 @@
 import React, { Component } from "react";
-import Link from "react-router-dom";
+// import Link from "react-router-dom";
 import { connect } from "react-redux";
+
+import Menu from "./Menu";
 
 class Header extends Component {
   renderContent() {
-    const { displayName } = this.props.authReducer;
+    // const { displayName } = this.props.authReducer;
     switch (this.props.authReducer) {
       case null:
         return;
       case false:
         return (
-          <li>
-            <a href="/auth/google">
-              <button type="button" className="btn">
-                Login with Google
-              </button>
-            </a>
-          </li>
+          <div className="Header-login">
+            <li>
+              <li>
+                <a href="/auth/google">Login with Google</a>
+              </li>
+            </li>
+          </div>
         );
       default:
         // logged in
-        return [
-          <li key="1">Welcome, {displayName}</li>,
-          <li key="2">
-            <a href="/api/logout">Logout</a>
-          </li>
-        ];
+        return <Menu />;
     }
   }
 
   render() {
-    console.log("Header props", this);
+    // console.log("Header props", this);
     return (
       <div className="Header">
         <h1>Summit Colorado</h1>
-        <ul>{this.renderContent()}</ul>
+        {this.renderContent()}
       </div>
     );
   }

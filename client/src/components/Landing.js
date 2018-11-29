@@ -2,7 +2,7 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <div>
+    <div className="Landing">
       <p>
         Welcome! Login to get started. Once you're in, you can browse all the
         trails. Add ones you want to hike onto your wishlist, or if you see one

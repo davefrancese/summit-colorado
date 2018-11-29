@@ -6,6 +6,7 @@ import * as actions from "../actions";
 
 import Header from "./Header";
 import Landing from "./Landing";
+import Dashboard from "./Dashboard";
 
 class App extends Component {
   componentDidMount() {
@@ -19,16 +20,7 @@ class App extends Component {
           <div className="App-container">
             <Header />
             <Route exact path="/" component={Landing} />
-
-            {/* FOOTER */}
-            <footer>
-              <p>
-                Summit Colorado built and curated by:{" "}
-                <a href="https://www.linkedin.com/in/davefrancese/">
-                  Dave Francese
-                </a>
-              </p>
-            </footer>
+            <Route exact path="/dashboard" component={Dashboard} />
           </div>
         </BrowserRouter>
       </div>
