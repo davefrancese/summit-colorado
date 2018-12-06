@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import Menu from "./Menu";
@@ -30,7 +30,11 @@ class Header extends Component {
     // console.log("Header props", this);
     return (
       <div className="Header">
-        <h1>Summit Colorado</h1>
+        <h1>
+          <Link to={this.props.authReducer ? "/dashboard" : "/"}>
+            Summit Colorado
+          </Link>
+        </h1>
         {this.renderContent()}
       </div>
     );
